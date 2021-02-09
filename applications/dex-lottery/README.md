@@ -6,14 +6,14 @@ When player place order it will have some chance to be matched with "winning" bu
 Smart asset script prevents player from placing an order with price more than 1 wavelet and amount more than 1.
 Winning chance is determined with Matcher exchange TX proof bytes, that should prevent "gaming" lottery.
 Probability of winning is about 121/256.
-The Lottery is played with Waves pair and "tickets" can be sold at any other pair.
+The Lottery is played with Plix pair and "tickets" can be sold at any other pair.
 
 ### Setting up
 
 1. Issue smart asset with script (decimals = 0)
 2. Set Data TX with boolean `isOpen` at `false`
-3. Place buy order for 1 wavelet at `Asset/WAVES` pair
-4. Place buy order for winning price at `Asset/WAVES` pair
+3. Place buy order for 1 wavelet at `Asset/Plix` pair
+4. Place buy order for winning price at `Asset/Plix` pair
 5. Place sell orders at any other pair
 6. Set account script
 7. Set Data TX with boolean `isOpen` at `true`
@@ -26,7 +26,7 @@ Set up some script to start cycle after each play, because your winning order wi
 If winning order is cancelled or filled:
 1. Clear account script
 2. Set Data TX with boolean `isOpen` at `false`
-3. Place buy order for winning price at `Asset/WAVES` pair
+3. Place buy order for winning price at `Asset/Plix` pair
 4. Set account script
 5. Set Data TX with boolean `isOpen` at `true`
 6. Lottery is ready!
