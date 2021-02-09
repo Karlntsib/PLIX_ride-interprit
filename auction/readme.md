@@ -1,4 +1,4 @@
-# Auction
+# Auction PLIX
 
 This is an auction dApp.
 You can start auction for any token(s) for some period of time (counted in blocks).
